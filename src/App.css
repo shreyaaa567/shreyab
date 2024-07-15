@@ -1,0 +1,482 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Moonrocks&display=swap');
+
+
+body{background: rgb(0, 0, 0);
+  font-family: poppins;
+  overflow-x: hidden;
+  
+  
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+  position: fixed; /* Make the nav bar fixed at the top */
+  top: 0; /* Align the nav bar to the top of the window */
+  left: 0; /* Align the nav bar to the left */
+  width: 98%; /* Make the nav bar span the full width of the window */
+  height: 40px;
+  background: #000000;
+  border-radius: 0; /* Remove border-radius for full-width effect */
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+  
+  z-index: 10000;
+
+}
+
+.nav-left img {
+  height: 45px; /* Adjust as necessary */
+}
+
+.nav-right {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-right a {
+  line-height: 40px;
+  text-decoration: none;
+  color: #ffffff; /* Adjust color */
+  margin: 0 15px;
+  font-size: 16px; /* Adjust as necessary */
+  position: relative;
+  z-index: 1;
+}
+
+
+.animation {
+  position: absolute;
+  bottom: -5px; /* Adjust based on your design */
+  height:100%;
+  background: linear-gradient(to right, rgba(112, 112, 112, 0.8), rgb(136, 36, 217,.8));
+  border-radius: 15px; /* Remove border-radius for full-width effect */
+  transition: all .5s ease 0s;
+  z-index: 0;
+}
+
+/* Default animation position */
+.start-home {
+  width: 80px; /* Adjust based on your HOME link width */
+  left: 20px; /* Adjust based on your padding */
+}
+
+nav a:nth-child(1) {
+  width: 80px;
+  
+}
+.nav-right a:nth-child(1):hover ~ .animation {
+  width: 80px; 
+  left: 20px; 
+}
+nav a:nth-child(2) {
+  width: 80px;
+}
+.nav-right a:nth-child(2):hover ~ .animation {
+  width: 80px; /* Width of ABOUT link */
+  left: 135px; /* Adjust based on your padding */
+}
+nav a:nth-child(3) {
+  width: 80px;
+}
+.nav-right a:nth-child(3):hover ~ .animation {
+  width: 80px; /* Width of SERVICES link */
+  left: 265px; /* Adjust based on your padding */
+}
+nav a:nth-child(4) {
+  width: 80px;
+}
+
+.nav-right a:nth-child(4):hover ~ .animation {
+  width: 80px; /* Width of PROJECTS link */
+  left: 395px; /* Adjust based on your padding */
+}
+
+
+
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  padding: 0 50px; 
+  background: url('./heroimg.jpg') no-repeat center center/cover;
+}
+
+
+.hero-content {
+  justify-content: center;
+  flex: 1;
+}
+
+.hero-content h5 {
+  padding-left: 120px;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  color: #c2aecf;
+  font-size: 60px; /* Adjust font size */
+  margin-bottom: -2px;
+  
+}
+
+.hero-content h2 {
+  padding-left: 20px;
+  color: #7a439f;
+  font-family: "Rubik Moonrocks", sans-serif;
+  font-size: 68px; /* Adjust font size */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: #c2aecf;
+  font-size: 28px; /* Adjust font size */
+  font-family: poppins;
+
+}
+
+
+.hero-image {
+  flex: 1;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 80%; /* Adjust width as needed */
+  height: 80%; /* Adjust height as needed */
+}
+
+
+.about {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.about h5 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  color: #c2aecf;
+  font-size: 24px;
+  margin-top: 0px;
+  line-height: .1; /* Adjust line-height */
+}
+
+.about h1 {
+  margin-top: 0px;
+  font-size: 60px;
+  color: #7a439f;
+  font-family: "Rubik Moonrocks", sans-serif;
+  margin-bottom: 20px;
+  line-height: .3; /* Adjust line-height */
+  margin-bottom: 40px;
+}
+
+.about h3 {
+  font-size: 15px;
+  color: #c2aecf;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: poppins;
+  text-align: justify;
+
+}
+
+
+
+
+
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  height:400px ;
+  margin-bottom: 0;
+}
+
+.tilt-box-wrap {
+  
+  padding: 15px;
+  padding-left: 60px;
+  width: 400px;
+  height: 450px;
+  position: relative;
+  transition: all 0.6s ease-out;
+  perspective: 1000px;
+  align-items: center;
+}
+
+.tilt-box-wrap:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+}
+
+.title-box {
+  margin-top: 20px;
+  width: 90%;
+
+  height: 90%;
+  background: rgb(22, 17, 48,.5);
+  border-radius: 15px;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, aqua, purple) 1;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.6s;
+  transform: rotateX(0deg) rotateY(0deg);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  
+}
+
+.title-box strong {
+  transform: translateZ(40px);
+  font-size: 20px;
+  color:#c2aecf;
+  font-family:"Rubik Doodle Shadow", system-ui ;
+}
+
+.t_over {
+  width: 33.33%;
+  height: 33.33%;
+  position: absolute;
+  z-index: 1;
+}
+
+.t_over:nth-child(1) { left: 0; top: 0; }
+.t_over:nth-child(2) { left: 33.33%; top: 0; }
+.t_over:nth-child(3) { left: 66.66%; top: 0; }
+.t_over:nth-child(4) { left: 0; top: 33.33%; }
+.t_over:nth-child(5) { left: 33.33%; top: 33.33%; }
+.t_over:nth-child(6) { left: 66.66%; top: 33.33%; }
+.t_over:nth-child(7) { left: 0; top: 66.66%; }
+.t_over:nth-child(8) { left: 33.33%; top: 66.66%; }
+.t_over:nth-child(9) { left: 66.66%; top: 66.66%; }
+
+.t_over:nth-child(1):hover ~ .title-box { transform: rotateX(-20deg) rotateY(20deg); }
+.t_over:nth-child(2):hover ~ .title-box { transform: rotateX(-20deg) rotateY(0deg); }
+.t_over:nth-child(3):hover ~ .title-box { transform: rotateX(-20deg) rotateY(-20deg); }
+.t_over:nth-child(4):hover ~ .title-box { transform: rotateX(0deg) rotateY(20deg); }
+.t_over:nth-child(5):hover ~ .title-box { transform: rotateX(0deg) rotateY(0deg); }
+.t_over:nth-child(6):hover ~ .title-box { transform: rotateX(0deg) rotateY(-20deg); }
+.t_over:nth-child(7):hover ~ .title-box { transform: rotateX(20deg) rotateY(20deg); }
+.t_over:nth-child(8):hover ~ .title-box { transform: rotateX(20deg) rotateY(0deg); }
+.t_over:nth-child(9):hover ~ .title-box { transform: rotateX(20deg) rotateY(-20deg); }
+
+.title-box p {
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 10px 0;
+  color: #c2aecf;
+  text-align: justify;
+}
+
+.title-box img {
+  padding-left: 25px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 0px; /* Adjust margin as needed */
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between boxes */
+}
+
+
+.pro-head h1{
+  margin-top: 80px;
+  color: #7a439f;
+  font-size: 60px;
+  font-family: "Rubik Moonrocks", sans-serif;
+  
+}
+
+.probox1 , .probox2,.probox3{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 20px;
+  display :flex;
+  
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.probox-left, .probox-right {
+  flex: 1;
+  padding: 0px;
+}
+
+.probox-left {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.probox-left img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.probox-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.probox-right p {
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-left: 40px;
+  padding: 20px;
+  text-align: justify;
+  overflow: hidden;
+  z-index: 1; /* Ensures the pseudo-element stays behind the text */
+  transition: transform 0.3s ease;
+}
+
+.probox-right p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(128, 0, 128, 0.3));
+  z-index: -1; /* Places the gradient behind the text */
+  filter: blur(8px); /* Creates the shadow effect */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Hides the shadow initially */
+}
+
+.probox-right p:hover::before {
+  transform: scale(1.1); /* Slightly enlarges the shadow */
+  opacity: 1; /* Shows the shadow on hover */
+}
+
+.probox-right p:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background: url('./heroimg.jpg') no-repeat center center/cover;
+  
+}
+
+.cont-right {
+  flex: 1;
+  padding: 20px;
+  margin-top: 170px;
+}
+
+
+.cont-left {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+ 
+}
+.conthead {
+  margin-bottom: 20px;
+}
+
+.conthead h1 {
+  padding-top:100px ;
+  color: #7a439f;
+  font-family: "Rubik Moonrocks", sans-serif;
+  font-size: 68px;
+  text-align: center;
+  margin: 20px 0;
+  
+}
+
+.contimg {
+  padding-top: 0;
+  width: 100%;
+  height: 65vh; 
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding-right:100px ;
+  margin: 0 auto;
+  background-color: rgba(45, 43, 45, 0.5); /* Dark background for the form */
+  border-radius: 15px;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, aqua, purple) 1;
+  padding: 40px;
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid hsl(240, 8%, 97%);
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+}
+.contact-form button {
+  padding: 10px;
+  background: linear-gradient(to right, rgba(45, 8, 62, 0.8), rgb(136, 36, 217,.8));
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to right, rgba(214, 170, 227, 0.8), rgba(170, 110, 219, 0.8));
+}
+
